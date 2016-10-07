@@ -1,0 +1,84 @@
+.section {
+  height: 100vh;
+  .centered-col {
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
+#intro {
+  background: url('../img/bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+#about {
+  img {
+    width: 100%;
+    height: 60vh;
+  }
+  h1 {
+    padding: 0 10% 0 0;
+  }
+  .about-text {
+    height: 60vh;
+  }
+}
+#menus {
+  background-color: #E3C7B8;
+  padding-left: 5%;
+  padding-right: 5%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    letter-spacing: -3px;
+  }
+  h2 {
+    margin-left: 15px;
+    border-color: #fdebda;
+  }
+  .breakfast, .lunch {
+    padding-top: 5%;
+  }
+  .dinner, .wine {
+    padding-top: 15%;
+  }
+}
+#contact {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+#gallery {
+  img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+#events {
+  background-color: #E3C7B8;
+  img {
+    width: 100%;
+  }
+  .section-title {
+    border-color: #fdebda;
+  }
+  .cultural {
+    margin-top: 5%;
+  }
+}
+#press {
+  img {
+    width: 100%;
+  }
+}

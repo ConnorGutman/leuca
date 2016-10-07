@@ -1,0 +1,83 @@
+h1 {
+  font-family: 'Lusitana', serif;
+  font-size: 32.5px;
+  color: #294C62;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18.75px;
+  color: #294C62;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11.25px;
+  font-weight: 600;
+  color: #294C62;
+}
+#menus {
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+  }
+  p {
+    text-transform: uppercase;
+  }
+}
+.section-title {
+  display: table;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2.5px solid #BE8F42;
+}
+
+#menus {
+  .section-title {
+    line-height: 1.25;
+  }
+  a {
+    color: #294C62;
+    border: 2.5px solid #fdebda;
+    background-color: transparent;
+    font-size: 11.25px;
+    font-weight: 600;
+    padding: 5px 50px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      border-color: #fdebda;
+      background-color: #294c62;
+      color: #fdebda;
+    }
+  }
+}
+
+#contact {
+  .section-title {
+    margin-left: 15px;
+    margin-bottom: 5%;
+  }
+}
+
+#gallery {
+  .section-title {
+    margin-left: 10%;
+    margin-bottom: 2%;
+  }
+}
+
+#events {
+  a {
+    color: #294C62;
+    border: 2.5px solid #fdebda;
+    background-color: transparent;
+    font-size: 11.25px;
+    font-weight: 600;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      border-color: #fdebda;
+      background-color: #294c62;
+      color: #fdebda;
+    }
+  }
+}
