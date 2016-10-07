@@ -1,0 +1,23 @@
+nav, .navbar-nav {
+  transition: all 0.25s ease;
+}
+nav {
+  background-color: #fdebda;
+  height: 10vh;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none !important;
+  vertical-align: top;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translateX(-50%);
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}

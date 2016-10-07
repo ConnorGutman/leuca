@@ -49,7 +49,15 @@ p {
     }
   }
 }
-
+nav {
+  a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11.25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #294C62;
+  }
+}
 #contact {
   .section-title {
     margin-left: 15px;
