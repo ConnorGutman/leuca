@@ -26,12 +26,13 @@ p {
   display: table;
   text-transform: uppercase;
   font-weight: 600;
+  line-height: 2;
   border-bottom: 2.5px solid #BE8F42;
 }
 
 #menus {
   .section-title {
-    line-height: 1.25;
+    line-height: 2;
   }
   a {
     color: #294C62;
@@ -52,10 +53,12 @@ p {
 nav {
   a {
     font-family: 'Open Sans', sans-serif;
-    font-size: 11.25px;
+    font-size: 14.25px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #294C62;
+  }
+  .active {
+    color: #be8f42 !important;
   }
 }
 #contact {
@@ -87,5 +90,19 @@ nav {
       background-color: #294c62;
       color: #fdebda;
     }
+  }
+}
+
+#press {
+  p {
+    margin: 7% 0 0 0;
+  }
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #294c62;
+  &:hover {
+    color: #be8f42;
   }
 }

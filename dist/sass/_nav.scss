@@ -4,20 +4,45 @@ nav, .navbar-nav {
 nav {
   background-color: #fdebda;
   height: 10vh;
+  //opacity: 0;
 }
 
 .navbar .navbar-nav {
-  display: inline-block;
+  //display: inline-block;
+  //float: none !important;
+  //vertical-align: top;
+  //position: absolute;
+  //left: 50%;
+  //top: 0;
+  //bottom: 0;
+//  margin: auto;
+  //transform: translateX(-50%);
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+.navbar-nav > li {
   float: none !important;
-  vertical-align: top;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  transform: translateX(-50%);
+  display: inline-block;
 }
 
 .navbar .navbar-collapse {
-  text-align: center;
+  //text-align: center;
+}
+
+.coverNav {
+  height: 15vh;
+  opacity: 0;
+}
+
+#littleLeuca {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+#littleLeuca2 {
+  width: 100px;
+  height: 100px;
 }

@@ -13,41 +13,75 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <nav class="navbar navbar-light navbar-fixed-top">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-light navbar-fixed-top coverNav">
     <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
       &#9776;
     </button>
     <div class="collapse navbar-toggleable-xs" id="topNav">
       <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" data-scroll href="#about-card">About</a>
+        <li class="nav-item">
+          <a class="nav-link toAbout" data-scroll href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-scroll href="#skills">Menus</a>
+          <a class="nav-link toMenus" data-scroll href="#menus">Menus</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-scroll href="#work">Contact</a>
-        </li>
-      <!--  <a class="navbar-brand" href="#"><img src="img/leuca.svg"></a> -->
-        <li class="nav-item">
-          <a class="nav-link" data-scroll href="#partners">Gallery</a>
+          <a class="nav-link toContact" data-scroll href="#contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-scroll href="#contact">Press</a>
+          <a class="" href="#intro"><img id="littleLeuca2" src="img/leuca.svg"></a>
+        </lI>
+        <li class="nav-item">
+          <a class="nav-link toGallery" data-scroll href="#gallery">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-scroll href="#contact">Events</a>
+          <a class="nav-link toEvents" data-scroll href="#events">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link toPress" data-scroll href="#press">Press</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid">
-    <div class="row section" id="intro">
+    <div class="row section scrollify-section" id="intro">
       <img src="img/leuca.svg">
     </div>
-    <div class="row section" id="about">
+    <div class="row scrollify-section" id="bottomNav">
+      <nav class="navbar navbar-light">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="bottomNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link toAbout" data-scroll href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toMenu" data-scroll href="#menus">Menus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toContact" data-scroll href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#intro"><img id="littleLeuca" src="img/leuca.svg"></a>
+            </lI>
+            <li class="nav-item">
+              <a class="nav-link toGallery" data-scroll href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toEvents" data-scroll href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toPress" data-scroll href="#press">Press</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row section scroll-default" id="about">
       <div class="col-sm-6 centered-col">
         <img src="img/Yolks_III_NF.jpg">
       </div>
@@ -56,7 +90,7 @@
         <h1>Leuca, a Southern Italian restaurant open all day serving Carmellini's take on Italy's coastal cuisines in a casually elegant atmosphere.</h1>
       </div>
     </div>
-    <div class="row section" id="menus">
+    <div class="row section scroll-default" id="menus">
       <div class="col-sm-6 centered-col">
         <h2 class="section-title">Menus</h2>
         <div class="col-sm-6">
@@ -64,7 +98,7 @@
           <p>SERVED 7AM TO 11AM</p>
           <a href="#">VIEW MENU</a>
           <h1 class="dinner">Dinner</h1>
-          <p>SUN - THURS | 5:30PM - 11PM FRI - SAT | 5:30PM - 12AM</p>
+          <p class="overflow-fix">SUN - THURS | 5:30PM - 11PM<br>FRI - SAT | 5:30PM - 12AM</p>
           <a href="#">VIEW MENU</a>
         </div>
         <div class="col-sm-6">
@@ -80,7 +114,7 @@
         <img src="img/table.png">
       </div>
     </div>
-    <div class="row section" id="contact">
+    <div class="row section scroll-default" id="contact">
       <div class="col-sm-5 centered-col">
         <img src="img/map.png">
       </div>
@@ -88,6 +122,7 @@
         <h2 class="section-title">Contact</h2>
         <div class="col-sm-6">
           <h1>111 North 12th Street<br>Brooklyn, NY 11249</h1>
+          <br>
           <h1>t. 987 654 3210</h1>
         </div>
         <div class="col-sm-6">
@@ -98,13 +133,13 @@
         </div>
       </div>
     </div>
-    <div class="row section" id="gallery">
+    <div class="row section scroll-default" id="gallery">
       <div class="col-xs-12 centered-col">
         <h2 class="section-title">Gallery</h2>
         <img src="img/Grandma_Ravioli_NoahFecks.jpg">
       </div>
     </div>
-    <div class="row section" id="events">
+    <div class="row section scroll-default" id="events">
       <div class="col-sm-4 centered-col">
         <img src="img/Screen Shot 2016-09-27 at 1.38.55 PM.png">
       </div>
@@ -117,8 +152,8 @@
         <a href="#">View Calendar</a>
       </div>
     </div>
-    <div class="row section" id="press">
-      <div class="col-sm-6 centered-col">
+    <div class="row section scroll-default" id="press">
+      <div class="col-sm-5 centered-col">
         <h2 class="section-title">Press</h2>
         <p class="text-uppercase">The New York Times</p>
         <h1>Social Life in Gotham</h1>
@@ -127,7 +162,7 @@
         <p class="text-uppercase">Brooklyn Magazine</p>
         <h1>A True 24-Hour Brooklyn Experience</h1>
       </div>
-      <div class="col-sm-6 centered-col">
+      <div class="col-sm-7 centered-col">
         <img src="img/Make_Cavatelli_NF.jpg">
       </div>
     </div>
@@ -146,23 +181,59 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-  <script>
-  $(document).ready(function() {
-    var scroll_start = 0;
-    var startchange = $('#about');
-    var offset = startchange.offset();
-    if (startchange.length) {
-      $(document).scroll(function() {
-        scroll_start = $(this).scrollTop();
-        if (scroll_start > offset.top) {
-          $("nav").css('opacity', '1');
-        } else {
-          $("nav").css('opacity', '0');
-        }
+  <script src="js/jquery.scrollify.min.js"></script>
+  <!--  <script>
+    $(function() {
+      $.scrollify({
+        interstitialSection: ".scrollify-section",
+        standardScrollElements: ".scroll-default",
+        easing: "easeOutExpo",
+        scrollSpeed: 3000
       });
-    }
-  });
-</script>
+    });
+  </script> -->
+  <script>
+    $(window).on("scroll", function() {
+      var s = 292.484 - Math.min(192.484, $(document).scrollTop());
+      $("#intro img").width(s).height(s);
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      var scroll_start = 0;
+      var startchange = $('#bottomNav');
+      var offset = startchange.offset();
+      if (startchange.length) {
+        $(document).scroll(function() {
+          scroll_start = $(this).scrollTop();
+          if (scroll_start > offset.top - 256) {
+            $("#intro img").css('opacity', '0');
+            $("#littleLeuca").css('opacity', '1');
+          } else {
+            $("#intro img").css('opacity', '1');
+            $("#littleLeuca").css('opacity', '0');
+          }
+        });
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      var scroll_start = 0;
+      var startchange = $('#bottomNav');
+      var offset = startchange.offset();
+      if (startchange.length) {
+        $(document).scroll(function() {
+          scroll_start = $(this).scrollTop();
+          if (scroll_start > offset.top) {
+            $(".coverNav").css('opacity', '1');
+          } else {
+            $(".coverNav").css('opacity', '0');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -6,20 +6,26 @@
   }
 }
 #intro {
+  height: 85vh;
   background: url('../img/bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   img {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 15vh;
     margin: auto;
+    z-index: 2;
   }
 }
+#bottomNav {
+  height: 15vh;
+}
 #about {
+  padding: 0 2%;
   img {
     width: 100%;
     height: 60vh;
@@ -47,6 +53,9 @@
     margin-left: 15px;
     border-color: #fdebda;
   }
+  .overflow-fix {
+    margin-bottom: 0;
+  }
   .breakfast, .lunch {
     padding-top: 5%;
   }
@@ -55,15 +64,19 @@
   }
 }
 #contact {
+  padding: 0 2%;
   img {
     width: 100%;
     height: auto;
   }
+  .centered-col {
+    height: 50vh;
+  }
 }
 #gallery {
   img {
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
   }
 }
 #events {
@@ -79,6 +92,7 @@
   }
 }
 #press {
+  padding: 0 5%;
   img {
     width: 100%;
   }
