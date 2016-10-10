@@ -1,4 +1,44 @@
 footer {
   background-color: #294C62;
-  height: 20vh;
+  height: 40vh;
+  padding: 5vh 2% 0 2%;
+  p,
+  label,
+  #signup, #submit {
+    font-size: 13.75px;
+    font-weight: 400;
+    color: #fdebda;
+  }
+  #signup {
+    display: inline;
+    width: 20%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1.25px solid #fdebda;
+    border-radius: 0;
+  }
+  #submit {
+    display: inline;
+    background-color: transparent;
+    border: 0;
+    margin-left: -70px;
+    transition: all 0.25s ease;
+    &:hover {
+      color: #be8f42;
+    }
+  }
+  .logos {
+    img {
+      float: right;
+      width: auto;
+      height: 28px;
+      margin: 0 2%;
+    }
+  }
+  @media(min-width: 768px) {
+    height: 30vh;
+  }
+  @media(min-width: 992px) {
+    height: 20vh;
+  }
 }
