@@ -25,7 +25,7 @@
     margin: auto;
     z-index: 2;
   }
-  @media(min-width: 992px) {
+  @media(min-width: 768px) {
     height: 85vh;
     background-size: cover;
     img {
@@ -118,9 +118,26 @@
 #gallery {
   height: auto !important;
   img {
-    width: 80%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 15%;
     margin-bottom: 10%;
+  }
+  #left, #right {
+    width: 3%;
+    height: auto;
+    position: absolute;
+    margin: auto 0;
+
+  }
+  #left {
+    top: 0;
+    bottom: 0;
+    left: 7%;
+  }
+  #right {
+    top: 0;
+    bottom: 0;
+    right: 7%;
   }
 }
 #events {
