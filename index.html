@@ -47,7 +47,8 @@
 
   <div class="container-fluid">
     <div class="row section scrollify-section" id="intro">
-      <img src="img/leuca.svg">
+      <img id="introLogo" src="img/leuca.svg">
+      <img id="cog" src="img/bg2.svg">
     </div>
     <div class="row scrollify-section" id="bottomNav">
       <nav class="navbar navbar-light">
@@ -95,19 +96,15 @@
         <h2 class="section-title text-xs-center text-sm-left">Menus</h2>
         <div class="col-sm-6">
           <h1 class="breakfast text-xs-center text-sm-left">Breakfast</h1>
-          <p class="text-xs-center text-sm-left">Breakfast Daily 7AM to 11AM</p>
-          <a href="#">VIEW MENU</a>
+          <a target="_blank" href="#">VIEW MENU</a>
           <h1 class="dinner text-xs-center text-sm-left">Dinner</h1>
-          <p class="text-xs-center text-sm-left">Dinner Daily 5:30PM to 11:00PM</p>
-          <a href="#">VIEW MENU</a>
+          <a target="_blank" href="#">VIEW MENU</a>
         </div>
         <div class="col-sm-6">
           <h1 class="lunch text-xs-center text-sm-left">Lunch</h1>
-          <p class="text-xs-center text-sm-left">Lunch Daily 12PM to 3PM</p>
-          <a href="#">VIEW MENU</a>
+          <a target="_blank" href="#">VIEW MENU</a>
           <h1 class="wine text-xs-center text-sm-left">Wine &amp; Spirits</h1>
-          <p class="text-xs-center text-sm-left">SERVED ALL DAY</p>
-          <a href="#">VIEW MENU</a>
+          <a target="_blank" href="#">VIEW MENU</a>
         </div>
       </div>
       <div class="col-sm-6">
@@ -121,15 +118,17 @@
       <div class="col-sm-7 centered-col">
         <h2 class="section-title">Contact</h2>
         <div class="col-sm-6">
-          <a href="https://www.google.com/maps/place/111+N+12th+St,+Brooklyn,+NY+11249/@40.7221136,-73.9593687,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25942d4fd21b5:0x8478af1e2b73f606!8m2!3d40.7221096!4d-73.95718"><h1>111 North 12th Street<br>Brooklyn, NY 11249</h1></a>
+          <a target="_blank" href="https://www.google.com/maps/place/111+N+12th+St,+Brooklyn,+NY+11249/@40.7221136,-73.9593687,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25942d4fd21b5:0x8478af1e2b73f606!8m2!3d40.7221096!4d-73.95718"><h1>111 North 12th Street<br>Brooklyn, NY 11249</h1></a>
           <br>
           <a href="tel:17185815900"><h1>t. 718 581 5900</h1></a>
         </div>
         <div class="col-sm-6">
-          <p>SUNDAY THRU THURSAY</p>
-          <h1>7am to 11pm</h1>
-          <p>FRIDAY &amp; SATURDAY</p>
-          <h1>7am to 12:30am</h1>
+          <p class="text-uppercase">Breakfast Daily</p>
+          <h1>7AM to 11AM</h1>
+          <p class="text-uppercase">Lunch Daily</p>
+          <h1>12PM to 3PM</h1>
+          <p class="text-uppercase">Dinner Daily</p>
+          <h1>5:30PM to 11:00PM</h1>
         </div>
       </div>
     </div>
@@ -148,17 +147,17 @@
       <div class="col-sm-7 centered-col">
         <h2 class="section-title private">Private Events</h2>
         <h1>Leuca's private dining room accommodates up to 28 guests at a long, white marble dining table fully surrounded by hand-painted frescos inspire by the coastal Mediterranean. The room features its own cocktail bar, audio-visual and family-style menus by Chef Andrew Carmellini.</h1>
-        <a href="#">Book Event</a>
+        <a target="_blank" href="#">Book Event</a>
         <h2 class="section-title cultural">Cultural Events</h2>
         <h1>Our cross-disciplinary cultural events feature established and emerging talents, each using The William Vale as their canvas in creative and unexpected ways.</h1>
-        <a href="#">View Calendar</a>
+        <a target="_blank" href="#">View Calendar</a>
       </div>
     </div>
     <div class="row section scroll-default" id="press">
       <div class="col-sm-5 centered-col">
         <h2 class="section-title">Press</h2>
-        <h1 class="text-uppercase">Coming Soon</h1>
-    <!--    <p class="text-uppercase">The New York Times</p>
+        <h1>Coming Soon</h1>
+        <!--    <p class="text-uppercase">The New York Times</p>
         <h1>Social Life in Gotham</h1>
         <p class="text-uppercase">Eater</p>
         <h1>Carmellini Plans Wood-Fired Southern Italian Restaurant for William Vale Hotel</h1>
@@ -179,7 +178,7 @@
               <div class="form-group">
                 <label class="control-label" for="sighup">Sign up for our newsletter</label>
                 <input id="signup" name="signup" type="text" placeholder="Email Address" class="form-control input-md">
-                              <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
               </div>
             </fieldset>
           </form>
@@ -227,28 +226,16 @@
     });
   </script> -->
   <script>
-    $(window).on("scroll", function() {
-      var s = 292.484 - Math.min(192.484, $(document).scrollTop());
-      $("#intro img").width(s).height(s);
-    });
-  </script>
-  <script>
     $(document).ready(function() {
-      var scroll_start = 0;
-      var startchange = $('#bottomNav');
-      var offset = startchange.offset();
-      if (startchange.length) {
-        $(document).scroll(function() {
-          scroll_start = $(this).scrollTop();
-          if (scroll_start > offset.top - 316) {
-            $("#intro img").css('opacity', '0');
-            $("#littleLeuca").css('opacity', '1');
-          } else {
-            $("#intro img").css('opacity', '1');
-            $("#littleLeuca").css('opacity', '0');
-          }
+      var $cog = $('#cog'),
+        $body = $(document.body),
+        bodyHeight = $body.height();
+
+      $(window).scroll(function() {
+        $cog.css({
+          'transform': 'rotate(' + ($body.scrollTop() / bodyHeight * 360) + 'deg)' + 'scale(2.5)'
         });
-      }
+      });
     });
   </script>
   <script>
@@ -259,7 +246,7 @@
       if (startchange.length) {
         $(document).scroll(function() {
           scroll_start = $(this).scrollTop();
-          if (scroll_start > offset.top) {
+          if (scroll_start > offset.top -5) {
             $(".coverNav").css('opacity', '1');
           } else {
             $(".coverNav").css('opacity', '0');
@@ -280,6 +267,7 @@
       var mapOptions = {
         // How zoomed in you want the map to start at (always required)
         zoom: 15,
+        scrollwheel: false,
 
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(40.7221136, -73.9593687), // New York
