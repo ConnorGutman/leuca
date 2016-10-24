@@ -29,7 +29,7 @@
         <li class="nav-item">
           <a class="nav-link toContact" data-scroll href="#contact">Contact</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav-item-logo hidden-xs-down">
           <a class="" href="#intro"><img id="littleLeuca2" src="img/leuca.svg"></a>
         </lI>
         <li class="nav-item">
@@ -50,7 +50,7 @@
       <img id="introLogo" src="img/leuca.svg">
       <img id="cog" src="img/bg2.svg">
     </div>
-    <div class="row scrollify-section" id="bottomNav">
+    <div class="row scrollify-section hidden-xs-down" id="bottomNav">
       <nav class="navbar navbar-light">
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
           &#9776;
@@ -66,7 +66,7 @@
             <li class="nav-item">
               <a class="nav-link toContact" data-scroll href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-item-logo">
               <a class="" href="#intro"><img id="littleLeuca" src="img/leuca.svg"></a>
             </lI>
             <li class="nav-item">
@@ -83,10 +83,10 @@
       </nav>
     </div>
     <div class="row section scroll-default" id="about">
-      <div class="col-sm-6 centered-col">
+      <div class="col-sm-6 col-xl-5 offset-xl-1 centered-col">
         <img src="img/about-img.png">
       </div>
-      <div class="col-sm-6 centered-col about-text">
+      <div class="col-sm-6 col-xl-5 centered-col about-text">
         <h2 class="section-title">About</h2>
         <h1>Inspired by Southern Italy, Leuca is a neighborhood restaurant from Chef Andrew Carmellini's NoHo Hospitality Group, serving house-made pastas, wood-fired pizzas and rustic dishes in an elegant, sun-lit space.</h1>
       </div>
@@ -133,18 +133,18 @@
       </div>
     </div>
     <div class="row section scroll-default" id="gallery">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-xl-10 offset-xl-1">
         <h2 class="section-title">Gallery</h2>
         <img id="left" src="img/left.svg">
-        <img src="img/Grandma_Ravioli_NoahFecks.jpg">
+        <img src="img/gallery-soon.png">
         <img id="right" src="img/right.svg">
       </div>
     </div>
     <div class="row section scroll-default" id="events">
-      <div class="col-sm-5">
+      <div class="col-sm-5 col-xl-4 offset-xl-1">
         <img src="img/Leuca_PrivateEvents.jpg">
       </div>
-      <div class="col-sm-7 centered-col">
+      <div class="col-sm-7 col-xl-6">
         <h2 class="section-title private">Private Events</h2>
         <h1>Leuca's private dining room accommodates up to 28 guests at a long, white marble dining table fully surrounded by hand-painted frescos inspire by the coastal Mediterranean. The room features its own cocktail bar, audio-visual and family-style menus by Chef Andrew Carmellini.</h1>
         <a target="_blank" href="#">Book Event</a>
@@ -154,17 +154,17 @@
       </div>
     </div>
     <div class="row section scroll-default" id="press">
-      <div class="col-sm-5 centered-col">
+      <div class="col-sm-5 col-xl-4 offset-xl-1 centered-col">
         <h2 class="section-title">Press</h2>
-        <h1>Coming Soon</h1>
-        <!--    <p class="text-uppercase">The New York Times</p>
-        <h1>Social Life in Gotham</h1>
-        <p class="text-uppercase">Eater</p>
-        <h1>Carmellini Plans Wood-Fired Southern Italian Restaurant for William Vale Hotel</h1>
-        <p class="text-uppercase">Brooklyn Magazine</p>
+        <h1 style="visibility:hidden;">Coming Soon</h1>
+        <p class="text-uppercase" style="visibility:hidden;">The New York Times</p>
+        <h1 style="visibility:hidden;">Social Life in Gotham</h1>
+        <!--    <p class="text-uppercase">Eater</p> -->
+        <h1 style="visibility:hidden;">Carmellini Plans Wood-Fired Southern Italian Restaurant for William Vale Hotel</h1>
+        <!--  <p class="text-uppercase">Brooklyn Magazine</p>
         <h1>A True 24-Hour Brooklyn Experience</h1> -->
       </div>
-      <div class="col-sm-7 centered-col">
+      <div class="col-sm-7 col-xl-6 centered-col">
         <img src="img/Leuca_Press.jpg">
       </div>
     </div>
@@ -226,6 +226,13 @@
     });
   </script> -->
   <script>
+    if ($(window).width() < 768) {
+      $(".nav-item").click(function() {
+        $(".navbar-toggler").click();
+      });
+    };
+  </script>
+  <script>
     $(document).ready(function() {
       var $cog = $('#cog'),
         $body = $(document.body),
@@ -240,18 +247,41 @@
   </script>
   <script>
     $(document).ready(function() {
-      var scroll_start = 0;
-      var startchange = $('#bottomNav');
-      var offset = startchange.offset();
-      if (startchange.length) {
-        $(document).scroll(function() {
-          scroll_start = $(this).scrollTop();
-          if (scroll_start > offset.top -5) {
-            $(".coverNav").css('opacity', '1');
-          } else {
-            $(".coverNav").css('opacity', '0');
-          }
-        });
+      if ($(window).width() > 768) {
+        var scroll_start = 0;
+        var startchange = $('#bottomNav');
+        var offset = startchange.offset();
+        if (startchange.length) {
+          $(document).scroll(function() {
+            scroll_start = $(this).scrollTop();
+            if (scroll_start > offset.top - 5) {
+              $(".coverNav").css('opacity', '1');
+            } else {
+              $(".coverNav").css('opacity', '0');
+            }
+          });
+        }
+      } else {
+        $(".coverNav").css('opacity', '1');
+      }
+    });
+    $(window).resize(function() {
+      if ($(window).width() > 768) {
+        var scroll_start = 0;
+        var startchange = $('#bottomNav');
+        var offset = startchange.offset();
+        if (startchange.length) {
+          $(document).scroll(function() {
+            scroll_start = $(this).scrollTop();
+            if (scroll_start > offset.top - 5) {
+              $(".coverNav").css('opacity', '1');
+            } else {
+              $(".coverNav").css('opacity', '0');
+            }
+          });
+        }
+      } else {
+        $(".coverNav").css('opacity', '1');
       }
     });
   </script>

@@ -56,7 +56,8 @@
 }
 #about {
   background-color: #fdebda;
-  padding: 0 2%;
+  margin-top: 100vh;
+  padding: 5vh 2%;
   img {
     width: 100%;
   }
@@ -72,11 +73,15 @@
       height: 60vh;
     }
   }
+  @media(min-width: 768px) {
+    margin-top: 0;
+    padding: 0 2%;
+  }
 }
 #menus {
   background-color: #E3C7B8;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
   img {
     width: 80%;
     margin-left: 10%;
@@ -109,7 +114,7 @@
   }
 }
 #contact {
-  padding: 0 2%;
+  padding: 0 5%;
   a {
     text-decoration: none;
     &:hover {
@@ -169,9 +174,20 @@
   }
   .section-title {
     border-color: #fdebda;
+    margin-top: 55px;
   }
   .cultural {
     margin-top: 55px;
+  }
+  @media(min-width: 1200px) {
+    img {
+      position: absolute;
+      width: 70%;
+      left: 15%;
+      top: -5vh;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
   @media(min-width: 992px) {
     padding-bottom: 0;

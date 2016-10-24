@@ -87,6 +87,12 @@ p {
   }
 }
 nav {
+  li {
+    margin: 0 1%;
+  }
+  .nav-item-logo {
+    margin: 0 2%;
+  }
   a {
     font-family: 'Open Sans', sans-serif;
     font-size: 10.25px;
@@ -140,6 +146,7 @@ nav {
     }
   }
   h1 {
+    font-size: 28.5px;
     margin-bottom: 30px;
   }
 }
