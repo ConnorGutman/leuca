@@ -51,12 +51,12 @@ nav {
 }
 @media(max-width: 768px) {
   .collapsing {
-    height: 100vh !important;
+    //height: 100vh !important;
     opacity: 0;
     transition: all 0.5s ease;
   }
   .in {
-    opacity: 1;
+    //opacity: 1;
     transition: all 0.5s ease;
   }
   nav #topNav {
@@ -64,7 +64,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+  //  height: 100vh;
     background-color: #fdebda;
     transition: all 1s ease;
   }
