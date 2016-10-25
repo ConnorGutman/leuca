@@ -210,7 +210,7 @@
       left: 0;
       right: 0;
       padding-top: 2vh;
-      margin: 0 auto 2vh auto !important;
+      margin: 0 auto 2vh !important;
       text-align: center;
     }
   }
@@ -254,10 +254,26 @@
 }
 #gallery {
   height: auto !important;
+  .col-xs-12 {
+    @media(max-width: 768px) {
+      padding: 0;
+    }
+  }
+  h2 {
+    @media(max-width: 768px) {
+      left: 0;
+      right: 0;
+      margin: 2vh auto 2vh auto !important;
+    }
+  }
   img {
-    width: 70%;
-    margin-left: 15%;
-    margin-bottom: 10%;
+    width: 100%;
+    margin-bottom: 5vh;
+    @media(min-width: 768px) {
+      width: 70%;
+      margin-left: 15%;
+      margin-bottom: 10%;
+    }
   }
   #left,
   #right {
