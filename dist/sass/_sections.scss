@@ -30,6 +30,7 @@
       font-size: 9.625px;
       font-weight: 600;
       padding: 8px 9px;
+      margin: 2vh 0;
       text-decoration: none;
       transition: all 0.25s ease-in-out;
       display: block;
@@ -54,6 +55,7 @@
       width: 100%;
       margin: 65vh 0;
       a {
+        margin: 0;
         &:nth-of-type(1) {
           margin-right: 2%;
         }
@@ -93,11 +95,17 @@
   }
   #downArrow {
     position: fixed;
-    width: 3%;
+    width: 15%;
     height: auto;
-    left: 48.5%;
-    bottom: 10vh;
+    left: 42.5%;
+    bottom: 2vh;
     z-index: 4;
+    @media(min-width:768px) {
+      width: 3%;
+      height: auto;
+      left: 48.5%;
+      bottom: 10vh;
+    }
   }
 }
 #bottomNav {
