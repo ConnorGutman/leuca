@@ -62,24 +62,33 @@ body {
 #aboutPepper {
   position: absolute;
   //bottom: 0;
-  top: 270vh;
+  top: 170vh;
   right: 30%;
   width: 5% !important;
   height: auto !important;
+  @media(min-width: 992px) {
+    top: 270vh;
+  }
 }
 #horseShoe {
   position: absolute;
   //bottom: 0;
-  top: 190vh;
+  top: 90vh;
   right: 15%;
   width: 15% !important;
   height: auto !important;
+  @media(min-width: 992px) {
+    top: 190vh;
+  }
 }
 #downArrow2 {
   position: absolute;
   //bottom: 0;
-  top: 340vh !important;
+  top: 200vh !important;
   left: 15%;
   width: 15% !important;
   height: auto !important;
+  @media(min-width: 992px) {
+    top: 340vh !important;
+  }
 }

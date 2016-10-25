@@ -4,7 +4,7 @@ nav,
 }
 nav {
   height: 5vh;
-  @media(min-width: 768px) {
+  @media(min-width: 992px) {
     height: 10vh;
     background-color: #fdebda;
   }
@@ -45,11 +45,11 @@ nav {
   height: 100px;
 }
 .nav-item {
-  @media(max-width: 768px) {
+  @media(max-width: 992px) {
     width: 100%;
   }
 }
-@media(max-width: 768px) {
+@media(max-width: 992px) {
   .collapsing {
     //height: 100vh !important;
     opacity: 0;
