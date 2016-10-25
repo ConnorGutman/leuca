@@ -44,7 +44,6 @@
       </ul>
     </div>
   </nav>
-
   <div class="container-fluid">
     <div class="row section scrollify-section" id="intro">
       <img id="introLogo" src="img/leuca.svg">
@@ -52,6 +51,7 @@
         <a target="_blank" href="#">RESERVATIONS</a>
         <a href="#contact">HOURS &amp; LOCATION</a>
       </div>
+      <img id="downArrow" class="floating" src="img/down.svg">
       <img id="cog" src="img/bg2.svg">
     </div>
     <div class="row scrollify-section hidden-xs-down" id="bottomNav">
@@ -94,6 +94,7 @@
         <h2 class="section-title">About</h2>
         <h1>Inspired by Southern Italy, Leuca is a neighborhood restaurant from Chef Andrew Carmellini's NoHo Hospitality Group, serving house-made pastas, wood-fired pizzas and rustic dishes in an elegant, sun-lit space.</h1>
       </div>
+      <img id="aboutPepper" class="parallax floating" src="img/pepper1.svg">
     </div>
     <div class="row section scroll-default" id="menus">
       <div class="col-sm-6 centered-col">
@@ -139,6 +140,7 @@
     <div class="row section scroll-default" id="gallery">
       <div class="col-xs-12 col-xl-10 offset-xl-1">
         <h2 class="section-title">Gallery</h2>
+        <img id="horseShoe" class="parallax floating" src="img/horseShoe.svg">
         <img id="left" src="img/left.svg">
         <img src="img/gallery-soon.png">
         <img id="right" src="img/right.svg">
@@ -147,6 +149,7 @@
     <div class="row section scroll-default" id="events">
       <div class="col-sm-5 col-xl-4 offset-xl-1">
         <img src="img/Leuca_PrivateEvents.jpg">
+        <img id="downArrow2" class="parallax floating" src="img/down.svg">
       </div>
       <div class="col-sm-7 col-xl-6">
         <h2 class="section-title private">Private Events</h2>
@@ -229,6 +232,13 @@
       });
     });
   </script> -->
+  <script>
+    $(window).scroll(function() {
+      var y = $(this).scrollTop(); // Pos
+      var r = 2; // Rate
+      $('.parallax').css('margin-top', parseInt(-y / r) + 'px'); // Switch x polarity to reverse direction
+    });
+  </script>
   <script>
     if ($(window).width() < 768) {
       $(".nav-item").click(function() {

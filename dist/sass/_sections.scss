@@ -20,7 +20,7 @@
   #introButtons {
     position: absolute;
     text-align: center;
-    margin: 65vh 0;
+    margin: 2vh 0;
     width: 100%;
     z-index: 3;
     a {
@@ -40,9 +40,6 @@
         background-color: #294c62;
         color: #fdebda;
       }
-      &:nth-of-type(1) {
-        margin-right: 2%;
-      }
       @media(min-width: 600px) {
         display: initial;
       }
@@ -51,6 +48,15 @@
       }
       @media(min-width: 992px) {
         font-size: 11.25px;
+      }
+    }
+    @media(min-width: 768px) {
+      width: 100%;
+      margin: 65vh 0;
+      a {
+        &:nth-of-type(1) {
+          margin-right: 2%;
+        }
       }
     }
   }
@@ -84,6 +90,14 @@
       height: 150px;
       width: auto;
     }
+  }
+  #downArrow {
+    position: fixed;
+    width: 3%;
+    height: auto;
+    left: 48.5%;
+    bottom: 10vh;
+    z-index: 4;
   }
 }
 #bottomNav {
