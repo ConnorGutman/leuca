@@ -263,7 +263,7 @@
     @media(max-width: 768px) {
       left: 0;
       right: 0;
-      margin: 2vh auto 2vh auto !important;
+      margin: 2vh auto !important;
     }
   }
   img {
@@ -297,16 +297,26 @@
   background-color: #E3C7B8;
   padding-bottom: 5vh;
   img {
-    width: 80%;
+    width: 100%;
     margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+    @media(min-width: 768px) {
+      width: 80%;
+      margin-bottom: 5vh;
+    }
   }
   .section-title {
     border-color: #fdebda;
-    margin-top: 55px;
+    margin-top: 5px;
+    @media(min-width: 768px) {
+      margin-top: 55px;
+    }
   }
   .cultural {
+    margin-top: 25px;
+    @media(min-width: 768px) {
     margin-top: 55px;
+    }
   }
   @media(min-width: 1200px) {
     img {
