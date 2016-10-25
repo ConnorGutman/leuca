@@ -315,7 +315,7 @@
   .cultural {
     margin-top: 25px;
     @media(min-width: 768px) {
-    margin-top: 55px;
+      margin-top: 55px;
     }
   }
   @media(min-width: 1200px) {
@@ -348,10 +348,27 @@
 }
 #press {
   padding: 0 5%;
+  @media(max-width: 768px) {
+    h1 {
+      display: none;
+    }
+    h2 {
+      left: 0;
+      right: 0;
+      margin: auto !important;
+      padding-top: 2vh;
+    }
+    p {
+      display: none;
+    }
+  }
   img {
     width: 80%;
     margin-left: 10%;
     margin-bottom: 5vh;
+    @media(max-width: 768px) {
+      margin-top: 2vh;
+    }
   }
   @media(min-width: 992px) {
     img {
