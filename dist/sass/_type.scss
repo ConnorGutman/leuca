@@ -28,7 +28,10 @@ p {
 }
 #about {
   h1 {
+    font-size: 20px;
+    @media(min-width: 768px) {
     font-size: 30px;
+    }
   }
   h2 {
     font-size: 16.75px;
