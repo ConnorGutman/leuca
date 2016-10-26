@@ -45,19 +45,23 @@
         display: initial;
       }
       @media(min-width: 955px) {
-        padding: 8px 12.25px;
+        padding: 15px;
       }
       @media(min-width: 992px) {
-        font-size: 11.25px;
+        font-size: 12px;
+      }
+      @media(min-width: 1400px) {
+        font-size: 16px;
+        padding: 20px;
       }
     }
     @media(min-width: 992px) {
       width: 100%;
-      margin: 65vh 0;
+      margin: 70vh 0;
       a {
         margin: 0;
         &:nth-of-type(1) {
-          margin-right: 2%;
+          margin-right: 25px;
         }
       }
     }
@@ -80,6 +84,7 @@
   }
   #introLogo {
     position: absolute;
+    width: 30%;
     left: 0;
     right: 0;
     top: 0;
@@ -95,15 +100,15 @@
   }
   #downArrow {
     position: fixed;
-    width: 5%;
+    width: 2.4%;
     height: auto;
-    left: 47.5%;
+    left: 48.8%;
     bottom: 5vh;
     z-index: 4;
     @media(min-width:992px) {
-      width: 3%;
+      width: 2.4%;
       height: auto;
-      left: 48.5%;
+      left: 48.8%;
       bottom: 10vh;
     }
   }
@@ -148,6 +153,12 @@
   background-color: #E3C7B8;
   padding-left: 8%;
   padding-right: 8%;
+  .centered-col {
+    height: 30vh;
+    @media(min-width: 992px) {
+      height: 40vh;
+    }
+  }
   img {
     width: 80%;
     margin-left: 10%;
@@ -248,7 +259,9 @@
       margin-top: 0;
     }
     .centered-col {
-      height: 50vh;
+      @media(min-width: 992px) {
+        height: 50vh;
+      }
     }
   }
 }
@@ -272,7 +285,7 @@
     @media(min-width: 992px) {
       width: 70%;
       margin-left: 15%;
-      margin-bottom: 10%;
+      margin-bottom: 22%;
     }
   }
   #left,
@@ -322,7 +335,8 @@
     img {
       position: absolute;
       width: 70%;
-      left: 15%;
+      right: 0;
+      //left: 15%;
       top: -5vh;
       margin-top: 0;
       margin-bottom: 0;
@@ -333,7 +347,8 @@
     img {
       position: absolute;
       width: 80%;
-      left: 10%;
+      right: 0;
+      //left: 10%;
       top: -5vh;
       margin-top: 0;
       margin-bottom: 0;
@@ -346,11 +361,19 @@
     height: 110vh;
   }
   @media(min-width: 992px) {
-    height: 100vh;
+    height: 120vh;
+  }
+  @media(min-width: 1400px) {
+    height: 130vh;
   }
 }
 #press {
   padding: 0 5%;
+  .centered-col {
+        @media(min-width: 992px) {
+    height: 45vh;
+  }
+  }
   @media(max-width: 992px) {
     h1 {
       display: none;

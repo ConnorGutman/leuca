@@ -25,6 +25,12 @@ footer {
     font-size: 12px;
     font-weight: 400;
     color: #fdebda;
+    @media(min-width: 1200px) {
+      font-size: 14px;
+    }
+    @media(min-width: 1400px) {
+      font-size: 16px;
+    }
   }
   #signup {
     display: inline;
@@ -52,7 +58,7 @@ footer {
     img {
       float: right;
       width: auto;
-      height: 20px;
+      height: 22px;
       margin: 0 2%;
     }
     @media(max-width: 992px) {
