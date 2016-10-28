@@ -52,16 +52,16 @@
       }
       @media(min-width: 1400px) {
         font-size: 16px;
-        padding: 20px;
+        padding: 17px;
       }
     }
     @media(min-width: 992px) {
       width: 100%;
-      margin: 70vh 0;
+      margin: 72vh 0;
       a {
         margin: 0;
         &:nth-of-type(1) {
-          margin-right: 25px;
+        //  margin-right: 25px;
         }
       }
     }
@@ -91,6 +91,10 @@
     bottom: 0;
     margin: auto;
     z-index: 2;
+    @media(min-width: 1400px) {
+      width: 27%;
+
+    }
   }
   @media(max-width: 992px) {
     #introLogo {
@@ -100,16 +104,16 @@
   }
   #downArrow {
     position: fixed;
-    width: 2.4%;
+    width: 10%;
     height: auto;
-    left: 48.8%;
+    left: 45%;
     bottom: 5vh;
     z-index: 4;
     @media(min-width:992px) {
-      width: 2.4%;
+      width: 3%;
       height: auto;
-      left: 48.8%;
-      bottom: 10vh;
+      left: 48.5%;
+      bottom: 5vh;
     }
   }
 }
@@ -324,6 +328,9 @@
     @media(min-width: 992px) {
       margin-top: 55px;
     }
+    @media(min-width: 1400px) {
+      margin-top: 250px;
+    }
   }
   .cultural {
     margin-top: 25px;
@@ -364,7 +371,7 @@
     height: 120vh;
   }
   @media(min-width: 1400px) {
-    height: 130vh;
+    height: 110vh;
   }
 }
 #press {

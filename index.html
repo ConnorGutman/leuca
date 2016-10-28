@@ -48,7 +48,7 @@
     <div class="row section scrollify-section" id="intro">
       <img id="introLogo" src="img/leuca.svg">
       <div id="introButtons">
-        <a target="_blank" href="#">RESERVATIONS</a>
+        <!--<a target="_blank" href="#">RESERVATIONS</a>-->
         <a href="#contact">HOURS &amp; LOCATION</a>
       </div>
       <img id="downArrow" class="floating" src="img/down.svg">
@@ -86,7 +86,7 @@
         </div>
       </nav>
     </div>
-    <div class="row section scroll-default" id="about">
+    <div class="row section scroll-default" data-scroll-id="about" id="about">
       <div class="col-sm-6 col-xl-5 offset-xl-1 centered-col">
         <img src="img/about-img.png">
       </div>
@@ -96,7 +96,7 @@
       </div>
       <img id="aboutPepper" class="parallax floating" src="img/pepper1.svg">
     </div>
-    <div class="row section scroll-default" id="menus">
+    <div class="row section scroll-default" data-scroll-id="menus" id="menus">
       <!--  <div class="col-xs-12 hidden-sm-up">
         <h2 class="section-title text-xs-center text-sm-left">Menus</h2>
         <h1 class="breakfast text-xs-center text-sm-left">Breakfast</h1>
@@ -131,7 +131,7 @@
         <img src="img/Leuaca_Menus.jpg">
       </div>
     </div>
-    <div class="row section scroll-default" id="contact">
+    <div class="row section scroll-default" data-scroll-id="contact" id="contact">
       <div class="col-md-5 centered-col">
         <div id="map"></div>
       </div>
@@ -147,13 +147,14 @@
           <p class="text-uppercase">Breakfast Daily</p>
           <h1>7AM to 11AM</h1>
           <p class="text-uppercase">Lunch Daily</p>
-          <h1>12PM to 3PM</h1>
+          <h1>Coming Soon</h1>
+          <!--<h1>12PM to 3PM</h1>-->
           <p class="text-uppercase">Dinner Daily</p>
-          <h1>5:30PM to 11:00PM</h1>
+          <h1>5:30PM to 12:00PM</h1>
         </div>
       </div>
     </div>
-    <div class="row section scroll-default" id="gallery">
+    <div class="row section scroll-default" data-scroll-id="gallery" id="gallery">
       <div class="col-xs-12 col-xl-10 offset-xl-1">
         <h2 class="section-title">Gallery</h2>
         <img id="horseShoe" class="parallax floating" src="img/horseShoe.svg">
@@ -162,7 +163,7 @@
         <!--    <img id="right" src="img/right.svg"> -->
       </div>
     </div>
-    <div class="row section scroll-default" id="events">
+    <div class="row section scroll-default" data-scroll-id="events" id="events">
       <div class="col-sm-5 col-xl-4 offset-xl-1">
         <img src="img/Leuca_PrivateEvents.jpg">
         <img id="downArrow2" class="parallax floating" src="img/down.svg">
@@ -170,13 +171,13 @@
       <div class="col-sm-7 col-xl-5 offset-xl-1">
         <h2 class="section-title private">Private Events</h2>
         <h1>Leuca's private dining room accommodates up to 28 guests at a long, white marble dining table fully surrounded by hand-painted frescos inspire by the coastal Mediterranean. The room features its own cocktail bar, audio-visual and family-style menus by Chef Andrew Carmellini.</h1>
-        <a target="_blank" href="#">Book Event</a>
+        <a target="_blank" href="http://www.thewilliamvale.com/events/">Book Event</a>
         <h2 class="section-title cultural">Cultural Events</h2>
         <h1>Our cross-disciplinary cultural events feature established and emerging talents, each using The William Vale as their canvas in creative and unexpected ways.</h1>
-        <a target="_blank" href="#">View Calendar</a>
+        <a target="_blank" href="http://www.thewilliamvale.com/calendar/">View Calendar</a>
       </div>
     </div>
-    <div class="row section scroll-default" id="press">
+    <div class="row section scroll-default" data-scroll-id="press" id="press">
       <div class="col-sm-5 col-xl-5 centered-col">
         <h2 class="section-title">Press</h2>
         <h1>Coming Soon</h1>
@@ -218,7 +219,7 @@
         </div>
         <div class="col-sm-2">
           <p>Friday &amp; Saturday
-            <br>7am to 12:30am</p>
+            <br>7am to 12am</p>
         </div>
         <div class="col-sm-2">
           <p>t. 987 654 3210</p>
@@ -237,6 +238,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.1.0/js/smooth-scroll.min.js" integrity="sha256-cVLzLP6LzGFk6t13wwxmdHj5YxS0rU5LiSfHg0m25ig=" crossorigin="anonymous"></script>
+  <script>
+    smoothScroll.init();
+  </script>
   <!-- <script src="js/jquery.scrollify.min.js"></script>
     <script>
     $(function() {

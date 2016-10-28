@@ -21,10 +21,10 @@ p {
 }
 @media(min-width: 992px) {
   h1 {
-    font-size: 32.5px;
+    font-size: 27px;
   }
   h2 {
-    font-size: 18.75px;
+    font-size: 18px;
   }
   p {
     font-size: 11.25px;
@@ -35,7 +35,7 @@ p {
     font-size: 20px;
     line-height: initial;
     @media(min-width: 992px) {
-      font-size: 30px;
+      font-size: 27px;
     }
     @media(min-width: 1400px) {
       font-size: 45px;
@@ -53,6 +53,9 @@ p {
     letter-spacing: 0;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 15px;
+    @media(min-width: 1400px) {
+      font-size: 45px;
+    }
   }
   p {
     text-transform: uppercase;
@@ -64,7 +67,7 @@ p {
   font-weight: 600;
   line-height: 2;
   border-bottom: 2.5px solid #BE8F42;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   letter-spacing: 1pt;
   @media(min-width: 1400px) {
     font-size: 26px;
@@ -124,13 +127,13 @@ nav {
   }
   @media(min-width: 992px) {
     a {
-      font-size: 12pt;
+      font-size: 10pt;
     }
   }
 }
 #contact {
   .section-title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding-bottom: 10px;
     line-height: 1;
     @media(min-width: 1400px) {
@@ -151,7 +154,7 @@ nav {
 #gallery {
   .section-title {
     margin-left: 15%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     @media(min-width: 1400px) {
       font-size: 26px;
     }
@@ -179,12 +182,16 @@ nav {
     @media(min-width: 992px) {
       display: initial;
     }
+    @media(min-width: 1400px) {
+      font-size: 16px;
+      letter-spacing: 1pt;
+    }
   }
   h1 {
     font-size: 14.5px;
     margin-bottom: 30px;
     @media(min-width: 768px) {
-      font-size: 28.5px;
+      font-size: 27px;
     }
     @media(min-width: 1400px) {
       font-size: 45px;
