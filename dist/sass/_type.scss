@@ -97,11 +97,11 @@ p {
       background-color: #294c62;
       color: #fdebda;
     }
-    @media(min-width: 600px) {
+    @media(min-width: 768px) {
       padding: 5px 15px;
       display: initial;
     }
-    @media(min-width: 955px) {
+    @media(min-width: 1200px) {
       padding: 7px 50px;
     }
     @media(min-width: 992px) {
@@ -110,17 +110,28 @@ p {
   }
 }
 nav {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15vh;
+  }
   li {
     margin: 0 1% !important;
   }
   .nav-item-logo {
     margin: 0 2% !important;
+    a {
+      line-height: normal !important;
+    }
   }
   a {
     font-family: 'Open Sans', sans-serif;
     font-size: 10.25px;
     font-weight: 600;
     text-transform: uppercase;
+    line-height: 15vh;
+    padding: 0 !important;
   }
   .active {
     color: #be8f42 !important;
@@ -200,7 +211,11 @@ nav {
 }
 #press {
   h1 {
+    margin-top: 15px;
+    @media(min-width: 992px) {
     margin-bottom: 55px;
+    margin-top: 0;
+    }
     @media(min-width: 1400px) {
       font-size: 45px;
     }

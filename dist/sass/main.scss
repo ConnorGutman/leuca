@@ -1,3 +1,6 @@
+/**
+Theme Name: Leuca
+Theme Description: A theme for Leuca at the William Vale **/
 //Floating animation code
 .floating {
   -webkit-animation-name: Floatingx;
@@ -91,4 +94,13 @@ body {
   @media(min-width: 992px) {
     top: 340vh !important;
   }
+}
+
+.featherlight-content {
+  width: 80%;
+  height: 70vh;
+   iframe {
+     width: 100%;
+     height: 100%;
+   }
 }

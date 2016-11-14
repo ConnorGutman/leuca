@@ -1,6 +1,9 @@
 .section {
   background-color: #fdebda;
-  @media(min-width: 544px) {
+  @media(min-width: 768px) {
+    height: auto;
+  }
+  @media(min-width: 992px) {
     height: 50vh;
     .centered-col {
       top: 50%;
@@ -41,7 +44,7 @@
         background-color: #294c62;
         color: #fdebda;
       }
-      @media(min-width: 600px) {
+      @media(min-width: 768px) {
         display: initial;
       }
       @media(min-width: 955px) {
@@ -96,7 +99,7 @@
 
     }
   }
-  @media(max-width: 992px) {
+  @media(max-width: 991px) {
     #introLogo {
       height: 150px;
       width: auto;
@@ -109,6 +112,10 @@
     left: 45%;
     bottom: 5vh;
     z-index: 4;
+    @media(min-width: 544px) {
+      width: 5%;
+      left: 47.5%;
+    }
     @media(min-width:992px) {
       width: 3%;
       height: auto;
@@ -135,7 +142,7 @@
     }
   }
   h2 {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       margin-top: 2vh;
     }
   }
@@ -172,7 +179,7 @@
   h2 {
     margin-left: 15px;
     border-color: #fdebda;
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       left: 0;
       right: 0;
       margin: auto;
@@ -180,12 +187,12 @@
     }
   }
   a {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       margin-bottom: 2vh;
     }
   }
   .breakfast {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       margin-top: 2vh;
     }
   }
@@ -215,13 +222,13 @@
 #contact {
   padding: 0 5%;
   h1 {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       text-align: center;
       margin-bottom: 2vh;
     }
   }
   h2 {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       left: 0;
       right: 0;
       padding-top: 2vh;
@@ -230,13 +237,8 @@
     }
   }
   p {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       text-align: center;
-    }
-  }
-  br {
-    @media(max-width: 992px) {
-      display: none;
     }
   }
   a {
@@ -272,12 +274,12 @@
 #gallery {
   height: auto !important;
   .col-xs-12 {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       padding: 0;
     }
   }
   h2 {
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       left: 0;
       right: 0;
       margin: 2vh auto !important;
@@ -361,12 +363,6 @@
       margin-bottom: 0;
     }
   }
-  @media(min-width: 544px) {
-    height: 70vh;
-  }
-  @media(min-width: 768px) {
-    height: 110vh;
-  }
   @media(min-width: 992px) {
     height: 120vh;
   }
@@ -381,9 +377,9 @@
     height: 45vh;
   }
   }
-  @media(max-width: 992px) {
+  @media(max-width: 991px) {
     h1 {
-      display: none;
+      //display: none;
     }
     h2 {
       left: 0;
@@ -399,7 +395,7 @@
     width: 80%;
     margin-left: 10%;
     margin-bottom: 5vh;
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
       margin-top: 2vh;
     }
   }
