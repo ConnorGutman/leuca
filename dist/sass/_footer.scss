@@ -63,9 +63,15 @@ footer {
     }
     @media(max-width: 991px) {
       width: 100%;
+      text-align: center;
+      a {
+        display: inline;
+        padding: 5px;
       img {
         float: none;
         height: 26px;
+        margin-top: 2vh;
+      }
       }
     }
   }

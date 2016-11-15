@@ -34,7 +34,9 @@ nav {
 .coverNav {
   height: 15vh;
   opacity: 0;
+  @media(min-width: 991px) {
   background-color: #E3C7B8;
+  }
 }
 #littleLeuca {
   width: 110px;

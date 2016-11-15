@@ -10,11 +10,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://fonts.googleapis.com/css?family=Lusitana|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-  <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="xicon"></div>
   <nav class="navbar navbar-light navbar-fixed-top coverNav">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
       &#9776;
@@ -49,7 +49,7 @@
     <div class="row section scrollify-section" id="intro">
       <img id="introLogo" src="img/leuca.svg">
       <div id="introButtons">
-        <a data-featherlight="iframe" href="http://www.opentable.com/single.aspx?rid=268384&restref=268384">RESERVATIONS</a>
+        <a id="showReservations" href="#reservations">RESERVATIONS</a>
         <a class="toContact" data-scroll href="#contact" href="#contact">HOURS &amp; LOCATION</a>
       </div>
       <img id="downArrow" class="floating" src="img/down.svg">
@@ -110,7 +110,7 @@
         <a target="_blank" href="drinks.pdf">VIEW MENU</a>
         <img src="img/Leuaca_Menus.jpg">
       </div>
-      <div class="col-md-6 centered-col hidden-md-down">
+      <div class="col-md-6 centered-col hidden-sm-down">
         <!-- CHANGE TO hidden-xs-down -->
         <h2 class="section-title text-xs-center text-md-left">Menus</h2>
           <div class="col-md-6">
@@ -126,7 +126,7 @@
           <a target="_blank" href="drinks.pdf">VIEW MENU</a>
         </div>
       </div>
-      <div class="col-md-6 hidden-md-down">
+      <div class="col-md-6 hidden-sm-down">
         <img src="img/Leuaca_Menus.jpg">
       </div>
     </div>
@@ -240,22 +240,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.1.0/js/smooth-scroll.min.js" integrity="sha256-cVLzLP6LzGFk6t13wwxmdHj5YxS0rU5LiSfHg0m25ig=" crossorigin="anonymous"></script>
-  <script src="//cdn.rawgit.com/noelboss/featherlight/1.5.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type='text/javascript' src='//secure.opentable.com/widget/reservation/loader?rid=268384&domain=com&type=standard&theme=standard&lang=en&overlay=false&iframe=false'></script>
   <script>
     smoothScroll.init();
   </script>
-  <!-- <script src="js/jquery.scrollify.min.js"></script>
-    <script>
-    $(function() {
-      $.scrollify({
-        interstitialSection: ".scrollify-section",
-        standardScrollElements: ".scroll-default",
-        easing: "easeOutExpo",
-        scrollSpeed: 3000
-      });
-    });
-  </script> -->
   <script>
+  $("#showReservations").click(function() {
+    $("#ot-widget-container4").css('display','block');
+    $("#xicon").css('display','block');
+  });
+  $("#xicon").click(function() {
+    $("#ot-widget-container4").css('display','none');
+    $("#xicon").css('display','none');
+  });
+  </script>
+    <script>
     $(window).scroll(function() {
       var y = $(this).scrollTop(); // Pos
       var r = 2; // Rate
@@ -323,7 +322,6 @@
     });
   </script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa19u4SxY-qBj_MnsRUTYdsoTlGv6L47E"></script>
-
   <script type="text/javascript">
     // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', init);

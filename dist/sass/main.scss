@@ -104,3 +104,67 @@ body {
      height: 100%;
    }
 }
+#xicon {
+  display: none;
+  position: fixed;
+  top: 20vh;
+  width: 250px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: url('../img/x.svg');
+  background-size: 15px 15px;
+  background-position: right;
+  background-repeat: no-repeat;
+  z-index: 999999;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+}
+#ot-widget-container4 {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99999;
+  background-color: rgba(253,235,218,0.7);
+}
+#ot-reservation-widget {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.standard {
+  margin: auto !important;
+  border-radius: 0 !important;
+  &:before {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 350px;
+    margin: auto;
+    background-color: #e3c7b8;
+    z-index: -1;
+  }
+  input {
+    min-width: 100px !important;
+    width: 100% !important;
+    background-color: #294c62 !important;
+    box-shadow: 0 0 0 1px #294c62 !important;
+  }
+}
